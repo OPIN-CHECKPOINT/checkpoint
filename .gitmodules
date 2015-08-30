@@ -385,3 +385,6 @@
 [submodule "modules/contrib/advanced_help"]
 	path = modules/contrib/advanced_help
 	url = http://git.drupal.org/project/advanced_help.git
+[submodule "modules/features/common"]
+	path = modules/features/common
+	url = https://github.com/OPIN-CHECKPOINT/common.git
