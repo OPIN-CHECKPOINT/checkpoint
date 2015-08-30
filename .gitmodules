@@ -439,3 +439,6 @@
 [submodule "libraries/modernizr"]
 	path = libraries/modernizr
 	url = https://github.com/Modernizr/Modernizr.git
+[submodule "modules/features/content_editor"]
+	path = modules/features/content_editor
+	url = https://github.com/OPIN-CHECKPOINT/content_editor.git
