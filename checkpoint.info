@@ -31,6 +31,7 @@ dependencies[] = audit
 dependencies[] = authentication
 dependencies[] = blocks
 dependencies[] = contexts
+dependencies[] = content_editor
 dependencies[] = forms
 dependencies[] = digital_assets
 dependencies[] = development
