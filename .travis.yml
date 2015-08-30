@@ -23,6 +23,9 @@ install:
   # - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   - sudo apt-get update > /dev/null
 
+  # Add the LDAP module for "Authentication" component support
+  - sudo apt-get install php5-ldap
+
   # Create a database for our Drupal site.
   - "mysql -e 'create database drupal;'"
 
