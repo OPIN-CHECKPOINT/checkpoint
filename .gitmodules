@@ -378,7 +378,7 @@
 	url = http://git.drupal.org/project/adminimal_theme.git
 [submodule "libraries/ckeditor"]
 	path = libraries/ckeditor
-	url = https://github.com/OPIN-INTRANET/ckeditor.git
+	url = https://github.com/OPIN-CHECKPOINT/ckeditor.git
 [submodule "modules/contrib/auto_entitylabel"]
 	path = modules/contrib/auto_entitylabel
 	url = http://git.drupal.org/project/auto_entitylabel.git
