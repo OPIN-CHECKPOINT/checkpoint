@@ -388,3 +388,45 @@
 [submodule "modules/features/common"]
 	path = modules/features/common
 	url = https://github.com/OPIN-CHECKPOINT/common.git
+[submodule "modules/features/administration"]
+	path = modules/features/administration
+	url = https://github.com/OPIN-CHECKPOINT/administration.git
+[submodule "modules/features/audit"]
+	path = modules/features/audit
+	url = https://github.com/OPIN-CHECKPOINT/audit.git
+[submodule "modules/features/authentication"]
+	path = modules/features/authentication
+	url = https://github.com/OPIN-CHECKPOINT/authentication.git
+[submodule "modules/features/blocks"]
+	path = modules/features/blocks
+	url = https://github.com/OPIN-CHECKPOINT/blocks.git
+[submodule "modules/features/contexts"]
+	path = modules/features/contexts
+	url = https://github.com/OPIN-CHECKPOINT/contexts.git
+[submodule "modules/features/forms"]
+	path = modules/features/forms
+	url = https://github.com/OPIN-CHECKPOINT/forms.git
+[submodule "modules/features/digital_assets"]
+	path = modules/features/digital_assets
+	url = https://github.com/OPIN-CHECKPOINT/digital_assets.git
+[submodule "modules/features/development"]
+	path = modules/features/development
+	url = https://github.com/OPIN-CHECKPOINT/development.git
+[submodule "modules/features/web_services"]
+	path = modules/features/web_services
+	url = https://github.com/OPIN-CHECKPOINT/web_services.git
+[submodule "modules/features/migration"]
+	path = modules/features/migration
+	url = https://github.com/OPIN-CHECKPOINT/migration.git
+[submodule "modules/features/multilingual"]
+	path = modules/features/multilingual
+	url = https://github.com/OPIN-CHECKPOINT/multilingual.git
+[submodule "modules/features/secure"]
+	path = modules/features/secure
+	url = https://github.com/OPIN-CHECKPOINT/secure.git
+[submodule "modules/features/lifecycle"]
+	path = modules/features/lifecycle
+	url = https://github.com/OPIN-CHECKPOINT/lifecycle.git
+[submodule "modules/features/displays"]
+	path = modules/features/displays
+	url = https://github.com/OPIN-CHECKPOINT/displays.git
