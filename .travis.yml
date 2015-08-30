@@ -30,8 +30,9 @@ install:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - composer global require --no-interaction --prefer-source drush/drush:6.*@dev
 
-  # Install the latest version of PHP CPD
+  # Install the latest version of PHPCPD and Codesniffer
   - composer global require "sebastian/phpcpd=*"
+  - composer global require "squizlabs/php_codesniffer=*"
 
   # Install Drupal.org drush.
   - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
