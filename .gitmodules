@@ -331,9 +331,6 @@
 [submodule "modules/contrib/leaflet"]
 	path = modules/contrib/leaflet
 	url = http://git.drupal.org/project/leaflet.git
-[submodule "modules/contrib/wysiwyg"]
-	path = modules/contrib/wysiwyg
-	url = http://git.drupal.org/project/wysiwyg.git
 [submodule "modules/contrib/libraries"]
 	path = modules/contrib/libraries
 	url = http://git.drupal.org/project/libraries.git
@@ -442,3 +439,14 @@
 [submodule "modules/features/content_editor"]
 	path = modules/features/content_editor
 	url = https://github.com/OPIN-CHECKPOINT/content_editor.git
+[submodule "modules/contrib/quickedit"]
+	path = modules/contrib/quickedit
+	url = http://git.drupal.org/project/quickedit.git
+[submodule "modules/contrib/quickedit_tab"]
+	path = modules/contrib/quickedit_tab
+	url = http://git.drupal.org/project/quickedit_tab.git
+	branch = 7.x-1.x
+[submodule "modules/contrib/ckeditor"]
+	path = modules/contrib/ckeditor
+	url = http://git.drupal.org/project/ckeditor.git
+	branch = master
