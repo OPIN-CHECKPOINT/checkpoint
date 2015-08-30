@@ -129,29 +129,55 @@ script:
   # Then run some Chrome-only tests.
   # - ./bin/behat --config behat.travis.yml -p chrome  
 
-  - drush cc drush
+  # Detecting duplicate code in PHP files
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/administration
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/audit
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/blocks
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/common
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/contexts
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/development
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/digital_assets
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/displays
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/forms
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/lifecycle
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/migration
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/multilingual
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/secure
+  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/web_services
 
   # Drupal code reviews
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty administration
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty audit
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty authentication
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty blocks
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty common
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty contexts
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty development
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty digital_assets
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty displays
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty forms
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty lifecycle
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty migration
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty multilingual
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty secure
-  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty web_services
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty administration
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty audit
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty authentication
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty blocks
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty common
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty contexts
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty development
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty digital_assets
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty displays
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty forms
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty lifecycle
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty migration
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty multilingual
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty secure
+  - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty web_services
+
+  # Run all the Drupal unit tests
+  - php scripts/run-tests.sh --url http://127.0.0.1:8888/ --verbose --color --all --concurrency 4 --php `which php` | tee /tmp/test.txt ; export TEST_EXIT=${PIPESTATUS[0]} ; echo $TEST_EXIT
+
+  # Also make the grep case insensitive and fail on run-tests.sh regular fails as well on fatal errors.
+  - TEST_OUTPUT=$(! egrep -i "([0-9]+ fails)|(PHP Fatal error)|([0-9]+ exceptions)" /tmp/test.txt > /dev/null)$?
 
 after_script:
 
   # Stop the webserver so that it's not still running when MySQL is stopped.
   - kill $SERVER_PID
+  
+  # Exit the build
+  - echo $TEST_EXIT
+  - echo $TEST_OUTPUT
+  - echo $TEST_PHPUNIT
+  - if [ $TEST_EXIT -eq 0 ] && [ $TEST_OUTPUT -eq 0 ] && [ $TEST_PHPUNIT -eq 0 ]; then exit 0; else exit 1; fi  
 
 notifications:
   slack:
