@@ -436,3 +436,6 @@
 [submodule "libraries/underscore"]
 	path = libraries/underscore
 	url = https://github.com/jashkenas/underscore.git
+[submodule "libraries/Modernizr"]
+	path = libraries/Modernizr
+	url = https://github.com/Modernizr/Modernizr.git
