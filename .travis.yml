@@ -46,7 +46,7 @@ install:
   # Build Codebase
   - drush dl drupal-$CORE
   - cd drupal-$CORE
-  - git clone --recursive https://github.com/OPIN-CHECKPOINT/checkpoint.git profiles/checkpoint
+  - ln -s $TRAVIS_BUILD_DIR profiles/checkpoint
 
   # Setup files
   - sudo chmod -R 777 sites/all
@@ -127,7 +127,26 @@ script:
   # - ./bin/behat --config behat.travis.yml
 
   # Then run some Chrome-only tests.
-  # - ./bin/behat --config behat.travis.yml -p chrome
+  # - ./bin/behat --config behat.travis.yml -p chrome  
+
+  - drush cc drush
+
+  # Drupal code reviews
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty administration
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty audit
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty authentication
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty blocks
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty common
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty contexts
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty development
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty digital_assets
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty displays
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty forms
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty lifecycle
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty migration
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty multilingual
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty secure
+  # - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty web_services
 
 after_script:
 
