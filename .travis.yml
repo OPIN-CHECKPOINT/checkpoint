@@ -26,13 +26,13 @@ install:
   # Create a database for our Drupal site.
   - "mysql -e 'create database drupal;'"
 
-  # Install the latest Drush 6.
+  # Set composer as part of the Global path
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - composer global require --no-interaction --prefer-source drush/drush:6.*@dev
 
-  # Install the latest version of PHPCPD and Codesniffer
-  - composer global require sebastian/phpcpd=*
-  - composer global require squizlabs/PHP_CodeSniffer:\<2
+  # Install composer packages 
+  - composer global require --no-interaction --prefer-source drush/drush:6.*@dev
+  - composer global require --no-interaction --prefer-source  sebastian/phpcpd=*
+  - composer global require --no-interaction --prefer-source  squizlabs/PHP_CodeSniffer:\<2
 
   # Install Drupal.org drush.
   - drush dl -y drupalorg_drush-7.x-1.x-dev --destination=$HOME/.drush
