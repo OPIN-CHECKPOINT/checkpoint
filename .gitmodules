@@ -430,3 +430,6 @@
 [submodule "modules/features/displays"]
 	path = modules/features/displays
 	url = https://github.com/OPIN-CHECKPOINT/displays.git
+[submodule "libraries/backbone"]
+	path = libraries/backbone
+	url = https://github.com/jashkenas/backbone.git
