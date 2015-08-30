@@ -235,9 +235,6 @@
 [submodule "modules/contrib/google_image_sitemap"]
 	path = modules/contrib/google_image_sitemap
 	url = http://git.drupal.org/project/google_image_sitemap.git
-[submodule "modules/contrib/modernizr"]
-	path = modules/contrib/modernizr
-	url = http://git.drupal.org/project/modernizr.git
 [submodule "modules/contrib/module_filter"]
 	path = modules/contrib/module_filter
 	url = http://git.drupal.org/project/module_filter.git
@@ -438,4 +435,7 @@
 	url = https://github.com/jashkenas/underscore.git
 [submodule "libraries/Modernizr"]
 	path = libraries/Modernizr
+	url = https://github.com/Modernizr/Modernizr.git
+[submodule "libraries/modernizr"]
+	path = libraries/modernizr
 	url = https://github.com/Modernizr/Modernizr.git
