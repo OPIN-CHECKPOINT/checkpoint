@@ -370,6 +370,9 @@
 [submodule "modules/contrib/votingapi"]
 	path = modules/contrib/votingapi
 	url = http://git.drupal.org/project/votingapi.git
+[submodule "modules/contrib/modernizr"]
+	path = modules/contrib/modernizr
+	url = http://git.drupal.org/project/modernizr.git	
 [submodule "themes/adminimal_theme"]
 	path = themes/adminimal_theme
 	url = http://git.drupal.org/project/adminimal_theme.git
@@ -433,9 +436,6 @@
 [submodule "libraries/underscore"]
 	path = libraries/underscore
 	url = https://github.com/jashkenas/underscore.git
-[submodule "libraries/Modernizr"]
-	path = libraries/Modernizr
-	url = https://github.com/Modernizr/Modernizr.git
 [submodule "libraries/modernizr"]
 	path = libraries/modernizr
 	url = https://github.com/Modernizr/Modernizr.git
