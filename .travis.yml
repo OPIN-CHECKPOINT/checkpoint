@@ -134,20 +134,20 @@ script:
   # - ./bin/behat --config behat.travis.yml -p chrome  
 
   # Detecting duplicate code in PHP files
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/administration
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/audit
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/blocks
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/common
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/contexts
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/development
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/digital_assets
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/displays
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/forms
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/lifecycle
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/migration
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/multilingual
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/secure
-  - phpcpd --names *.module,*.inc,*.test profiles/modules/features/web_services
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/administration
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/audit
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/blocks
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/common
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/contexts
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/development
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/digital_assets
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/displays
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/forms
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/lifecycle
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/migration
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/multilingual
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/secure
+  - phpcpd --names *.module,*.inc,*.test profiles/checkpoint/modules/features/web_services
 
   # Drupal code reviews
   - drush coder-review --reviews=production,security,style,i18n,potx,sniffer --no-empty administration
