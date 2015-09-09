@@ -41,3 +41,4 @@ dependencies[] = common
 ; dependencies[] = secure
 ; dependencies[] = lifecycle
 ; dependencies[] = displays
+; dependencies[] = seo
