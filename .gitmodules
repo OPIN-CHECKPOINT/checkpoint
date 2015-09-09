@@ -453,3 +453,6 @@
 [submodule "modules/contrib/simplified_menu_admin"]
 	path = modules/contrib/simplified_menu_admin
 	url = http://git.drupal.org/project/simplified_menu_admin.git
+[submodule "themes/ember"]
+	path = themes/ember
+	url = http://git.drupal.org/project/ember.git
