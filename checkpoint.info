@@ -25,7 +25,7 @@ dependencies[] = file
 dependencies[] = rdf
 
 ; Checkpoint
-; dependencies[] = common
+dependencies[] = common
 ; dependencies[] = administration
 ; dependencies[] = audit
 ; dependencies[] = authentication
