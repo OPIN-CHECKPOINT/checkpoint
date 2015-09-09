@@ -450,3 +450,6 @@
 	path = modules/contrib/ckeditor
 	url = http://git.drupal.org/project/ckeditor.git
 	branch = master
+[submodule "modules/contrib/simplified_menu_admin"]
+	path = modules/contrib/simplified_menu_admin
+	url = http://git.drupal.org/project/simplified_menu_admin.git
