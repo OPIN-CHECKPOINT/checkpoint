@@ -471,3 +471,6 @@
 [submodule "modules/contrib/webform"]
 	path = modules/contrib/webform
 	url = http://git.drupal.org/project/webform.git
+[submodule "modules/contrib/oauth"]
+	path = modules/contrib/oauth
+	url = http://git.drupal.org/project/oauth.git
