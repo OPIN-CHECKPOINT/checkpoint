@@ -459,3 +459,6 @@
 [submodule "modules/contrib/ember_support"]
 	path = modules/contrib/ember_support
 	url = http://git.drupal.org/project/ember_support.git
+[submodule "themes/responsive_bartik"]
+	path = themes/responsive_bartik
+	url = http://git.drupal.org/project/responsive_bartik.git
