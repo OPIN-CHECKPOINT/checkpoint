@@ -468,3 +468,6 @@
 [submodule "modules/features/seo"]
 	path = modules/features/seo
 	url = https://github.com/OPIN-CHECKPOINT/seo.git
+[submodule "modules/contrib/webform"]
+	path = modules/contrib/webform
+	url = http://git.drupal.org/project/webform.git
