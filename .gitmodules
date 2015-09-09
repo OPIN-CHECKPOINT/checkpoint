@@ -465,3 +465,6 @@
 [submodule "themes/responsive_bartik"]
 	path = themes/responsive_bartik
 	url = http://git.drupal.org/project/responsive_bartik.git
+[submodule "modules/features/seo"]
+	path = modules/features/seo
+	url = https://github.com/OPIN-CHECKPOINT/seo.git
