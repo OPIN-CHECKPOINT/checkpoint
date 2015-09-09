@@ -456,3 +456,6 @@
 [submodule "themes/ember"]
 	path = themes/ember
 	url = http://git.drupal.org/project/ember.git
+[submodule "modules/contrib/ember_support"]
+	path = modules/contrib/ember_support
+	url = http://git.drupal.org/project/ember_support.git
